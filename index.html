@@ -3,22 +3,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Album Builder</title>
+    <title>Book Builder</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <div id="container-box">
-      <p id="text">Insert the name of your favorite actor</p>
-      <input type="text" id="input" />
-      <button type="button" id="btn">Submit</button>
-      <p id="text">
-        Insert the name of your favorite movie in which your actor was starred
-        in
-      </p>
-      <input type="text" id="input2" />
-      <button type="button" id="btn2">Submit</button>
-    </div>
+      <h1>Literature</h1>
+      <form action="" class="container-box">
+        <p id="text">Your Name</p>
+        <input type="text" id="name">
+        <p id="text">Favorite Book</p>
+        <input type="text" id="book" />
+        <p id="text">Favorite Book Genre</p>
+        <input type="text" id="genre" />
+        <p id="text">Favorite Author</p>
+        <input type="text" id="author" />
+        <p id ="text">Click the button for your results</p>
+        <button type="button" id="btn">Results</button>
+        <!-- <p id="text">Click to Remove</p>
+        <button type="button" id="btn">Remove</button> -->
+      </div>
+      </form>
     <script src="index.js" type="module"></script>
   </body>
 </html>
