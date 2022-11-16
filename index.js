@@ -20,7 +20,7 @@ DOMSelectors.result.addEventListener("click", function () {
   let genre = DOMSelectors.genre.value;
   DOMSelectors.box.insertAdjacentHTML(
     "beforeend",
-    `<p id="print">Your name is ${name}. Your favorite book is ${book}. Your favorite author is ${author}. Your favorite genre is ${genre}</p>`
+    `<h1 id="yourname">Hello ${name}</h1> <p id ="yourinfo">Your favorite book is ${book}. Your favorite author is ${author}. Your favorite genre is ${genre}</p>`
   );
   DOMSelectors.name.value = "";
   DOMSelectors.book.value = "";
@@ -28,5 +28,6 @@ DOMSelectors.result.addEventListener("click", function () {
   DOMSelectors.genre.value = "";
 });
 DOMSelectors.erase.addEventListener("click", function () {
-  document.getElementById("print").remove();
+  document.getElementById("yourname").remove();
+  document.getElementById("yourinfo").remove();
 });

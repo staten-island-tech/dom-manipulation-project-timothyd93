@@ -1,9 +1,11 @@
 
   #container-box {
-    background-color:black;
-    font-size: 2vh;
     color: cornsilk;
     text-align: center;
+    border: 1rem solid;
+  }
+  .screen {
+    background-color: green;
   }
 
   
