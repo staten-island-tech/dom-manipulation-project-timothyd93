@@ -21,7 +21,7 @@ function adjacentHTML() {
   };
   DOMSelectors.box.insertAdjacentHTML(
     "beforeend",
-    `<h1 id ="infoname"> Hello ${info.name}</h1> <p id ="yourinfo">Your favorite book is ${info.book}. Your favorite author is ${info.author}. Your favorite genre is ${info.genre}</p> <button id="remove">Remove</button>`
+    `<h1 id ="infoname"> Hello ${info.name}</h1> <p id ="yourinfo">Your favorite book is ${info.book}. Your favorite author is ${info.author}. Your favorite genre is ${info.genre}</p> <button id="removebtn">Remove</button>`
   );
 }
 
@@ -32,11 +32,18 @@ function clearInputs() {
   DOMSelectors.genre.value = "";
 }
 
+// function removeButton() {
+//   DOMSelectors.remove = document.getElementById("remove");
+//   DOMSelectors.remove.addEventListener("click", function () {
+//     document.getElementById("infoname").remove();
+//     document.getElementById("yourinfo").remove();
+//     document.getElementById("remove").remove();
+//   });
+// }
 function removeButton() {
-  DOMSelectors.remove = document.getElementById("remove");
-  DOMSelectors.remove.addEventListener("click", function () {
-    document.getElementById("infoname").remove();
-    document.getElementById("yourinfo").remove();
-    document.getElementById("remove").remove();
-  });
+  const buttons = document.querySelectorAll(`#removebtn`);
+  const buttonsArray = Array.from(buttons);
+  buttonsArray.forEach((button) =>
+    button.addEventListener("click", function () {}, alert("imhere"))
+  );
 }
