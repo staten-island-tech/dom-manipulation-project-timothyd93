@@ -7,13 +7,8 @@ const DOMSelectors = {
   genre: document.querySelector(`#genre`),
 };
 
-DOMSelectors.result.addEventListener("click", function () {
-  insertHTML();
-  clearInputs();
-  removeButton();
-});
 function insertHTML() {
-  const info = {
+  const user = {
     name: DOMSelectors.name.value,
     book: DOMSelectors.book.value,
     author: DOMSelectors.author.value,
@@ -21,7 +16,7 @@ function insertHTML() {
   };
   DOMSelectors.box.insertAdjacentHTML(
     "beforeend",
-    `<div><h1 id ="infoname"> Hello ${info.name}</h1> <p id ="yourinfo">Your favorite book is ${info.book}. Your favorite author is ${info.author}. Your favorite genre is ${info.genre}.</p> <button id="removebtn">Remove</button></div>`
+    `<div><h1 id ="infoname"> Hello ${user.name}</h1> <p id ="yourinfo">Your favorite book is ${user.book}. Your favorite author is ${user.author}. Your favorite genre is ${user.genre}.</p> <button id="removebtn">Remove</button></div>`
   );
 }
 
@@ -41,3 +36,8 @@ function removeButton() {
     })
   );
 }
+DOMSelectors.result.addEventListener("click", function () {
+  insertHTML();
+  clearInputs();
+  removeButton();
+});
